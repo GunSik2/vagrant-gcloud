@@ -8,7 +8,9 @@ sudo apt-get update
 
 echo ' ** Installing core stuff'
 sudo apt-get install -y unzip
-sudo apt-get install -y git-core
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install -y git 
 
 echo ' ** Fixing colors'
 sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' /home/vagrant/.bashrc
